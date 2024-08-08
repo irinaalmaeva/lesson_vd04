@@ -4,7 +4,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 @app.route('/')
-def index():
+def time():
     now = datetime.now()
     date_time = now.strftime("%Y-%m-%d %H:%M:%S")
     return render_template('time.html', date_time=date_time)
